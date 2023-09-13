@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const createLogs = (message, initialPath) => {
-  const logDirectory = path.join(initialPath, 'logs');
+const createLogs = (message, initialPath, nameFolder) => {
+  const logDirectory = path.join(initialPath, nameFolder);
   const date = new Date(Date.now());
 
   const logFileName = date.toJSON().slice(0, 10) + '.log';
